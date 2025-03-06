@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>skyhaibara</copyright>
-        <lastBuildDate>Wed, 05 Mar 2025 17:49:25 +0800</lastBuildDate><atom:link href="https://skyhaibara.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 06 Mar 2025 18:00:00 +0800</lastBuildDate><atom:link href="https://skyhaibara.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CTF Misc</title>
         <link>https://skyhaibara.github.io/p/ctf-misc/</link>
-        <pubDate>Wed, 05 Mar 2025 17:49:25 +0800</pubDate>
+        <pubDate>Thu, 06 Mar 2025 18:00:00 +0800</pubDate>
         
         <guid>https://skyhaibara.github.io/p/ctf-misc/</guid>
-        <description>&lt;img src="https://skyhaibara.github.io/mc.png" alt="Featured image of post CTF Misc" /&gt;&lt;h1 id=&#34;misc&#34;&gt;Misc
+        <description>&lt;img src="https://skyhaibara.github.io/Mc.png" alt="Featured image of post CTF Misc" /&gt;&lt;h1 id=&#34;misc&#34;&gt;Misc
 &lt;/h1&gt;&lt;h2 id=&#34;kalilinux系统&#34;&gt;Kali（Linux系统）
 &lt;/h2&gt;&lt;h3 id=&#34;extundelete&#34;&gt;extundelete
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -67,7 +67,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;testdisk : testdisk diskimage.dat
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C to copy the selected files, c to copy the current file  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; C to copy the selected files, c to copy the current file  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;traffic流量&#34;&gt;Traffic（流量）
