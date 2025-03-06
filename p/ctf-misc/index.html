@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Misc Kali（Linux系统） extundelete 1 2 3 4 5 6 7 8 9 10 # 在linux上挂载光盘的命令 mkdir /mnt/disk mount attachment.img /mnt/disk/ cd /mnt/disk #可以使用 eog 图片名 命令来查看图片 #使用结束后用 umount: /mnt/disk #命令取消挂载 extundelete --restore-all attachment.img # 数据恢复成功后会生成一个 RECOVERED_FILES 文件 压缩包套娃 1 2 while [ &#34;find . -type f -name &#39;*.tar.xz&#39; | wc -l&#34; -gt 0 ]; do find -type f -name &#34;*.tar.xz&#34; -exec tar xf &#39;{}&#39; \\; -exec rm -- &#39;{}&#39; \\;; done; strings flag 查找flag字符 LSB（老色比） 1 2 3 4 5 zsteg -e &#34;b8,rgb,lsb,xy&#34; 1.png &gt; diskimage.dat testdisk : testdisk diskimage.dat C to copy the selected files, c to copy the current file Traffic（流量） SMTP TLS 1 2 3 4 5 -----BEGIN RSA PRIVATE KEY----- XXXXXXX -----END RSA PRIVATE KEY----- wireshark 编辑即可 SMB+hascat 省赛的题目复现，讲一下自己的理解 Code（编码） 猪圈密码： ">
+<title>CTF Misc</title>
+
+<link rel='canonical' href='https://skyhaibara.github.io/p/ctf-misc/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="CTF Misc">
+<meta property='og:description' content="Misc Kali（Linux系统） extundelete 1 2 3 4 5 6 7 8 9 10 # 在linux上挂载光盘的命令 mkdir /mnt/disk mount attachment.img /mnt/disk/ cd /mnt/disk #可以使用 eog 图片名 命令来查看图片 #使用结束后用 umount: /mnt/disk #命令取消挂载 extundelete --restore-all attachment.img # 数据恢复成功后会生成一个 RECOVERED_FILES 文件 压缩包套娃 1 2 while [ &#34;find . -type f -name &#39;*.tar.xz&#39; | wc -l&#34; -gt 0 ]; do find -type f -name &#34;*.tar.xz&#34; -exec tar xf &#39;{}&#39; \\; -exec rm -- &#39;{}&#39; \\;; done; strings flag 查找flag字符 LSB（老色比） 1 2 3 4 5 zsteg -e &#34;b8,rgb,lsb,xy&#34; 1.png &gt; diskimage.dat testdisk : testdisk diskimage.dat C to copy the selected files, c to copy the current file Traffic（流量） SMTP TLS 1 2 3 4 5 -----BEGIN RSA PRIVATE KEY----- XXXXXXX -----END RSA PRIVATE KEY----- wireshark 编辑即可 SMB+hascat 省赛的题目复现，讲一下自己的理解 Code（编码） 猪圈密码： ">
+<meta property='og:url' content='https://skyhaibara.github.io/p/ctf-misc/'>
+<meta property='og:site_name' content='skyhaibara'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-05T17:49:25&#43;08:00'/><meta property='article:modified_time' content='2025-03-05T17:49:25&#43;08:00'/><meta property='og:image' content='https://skyhaibara.github.io/mc.png' />
+<meta name="twitter:title" content="CTF Misc">
+<meta name="twitter:description" content="Misc Kali（Linux系统） extundelete 1 2 3 4 5 6 7 8 9 10 # 在linux上挂载光盘的命令 mkdir /mnt/disk mount attachment.img /mnt/disk/ cd /mnt/disk #可以使用 eog 图片名 命令来查看图片 #使用结束后用 umount: /mnt/disk #命令取消挂载 extundelete --restore-all attachment.img # 数据恢复成功后会生成一个 RECOVERED_FILES 文件 压缩包套娃 1 2 while [ &#34;find . -type f -name &#39;*.tar.xz&#39; | wc -l&#34; -gt 0 ]; do find -type f -name &#34;*.tar.xz&#34; -exec tar xf &#39;{}&#39; \\; -exec rm -- &#39;{}&#39; \\;; done; strings flag 查找flag字符 LSB（老色比） 1 2 3 4 5 zsteg -e &#34;b8,rgb,lsb,xy&#34; 1.png &gt; diskimage.dat testdisk : testdisk diskimage.dat C to copy the selected files, c to copy the current file Traffic（流量） SMTP TLS 1 2 3 4 5 -----BEGIN RSA PRIVATE KEY----- XXXXXXX -----END RSA PRIVATE KEY----- wireshark 编辑即可 SMB+hascat 省赛的题目复现，讲一下自己的理解 Code（编码） 猪圈密码： "><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://skyhaibara.github.io/mc.png' />
+    <link rel="shortcut icon" href="/haibara.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/fr_haibara_hu_641995e6bc6a5c91.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍱</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">skyhaibara</a></h1>
+            <h2 class="site-description">灰原哀</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://bilibili.com'
+                        target="_blank"
+                        title="bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1740383827362" class="icon" viewBox="0 0 1129 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2616" xmlns:xlink="http://www.w3.org/1999/xlink" width="220.5078125" height="200"><path d="M234.909 9.656a80.468 80.468 0 0 1 68.398 0 167.374 167.374 0 0 1 41.843 30.578l160.937 140.82h115.07l160.936-140.82a168.983 168.983 0 0 1 41.843-30.578A80.468 80.468 0 0 1 930.96 76.445a80.468 80.468 0 0 1-17.703 53.914 449.818 449.818 0 0 1-35.406 32.187 232.553 232.553 0 0 1-22.531 18.508h100.585a170.593 170.593 0 0 1 118.289 53.109 171.397 171.397 0 0 1 53.914 118.288v462.693a325.897 325.897 0 0 1-4.024 70.007 178.64 178.64 0 0 1-80.468 112.656 173.007 173.007 0 0 1-92.539 25.75h-738.7a341.186 341.186 0 0 1-72.421-4.024A177.835 177.835 0 0 1 28.91 939.065a172.202 172.202 0 0 1-27.36-92.539V388.662a360.498 360.498 0 0 1 0-66.789A177.03 177.03 0 0 1 162.487 178.64h105.414c-16.899-12.07-31.383-26.555-46.672-39.43a80.468 80.468 0 0 1-25.75-65.984 80.468 80.468 0 0 1 39.43-63.57M216.4 321.873a80.468 80.468 0 0 0-63.57 57.937 108.632 108.632 0 0 0 0 30.578v380.615a80.468 80.468 0 0 0 55.523 80.469 106.218 106.218 0 0 0 34.601 5.632h654.208a80.468 80.468 0 0 0 76.444-47.476 112.656 112.656 0 0 0 8.047-53.109v-354.06a135.187 135.187 0 0 0 0-38.625 80.468 80.468 0 0 0-52.304-54.719 129.554 129.554 0 0 0-49.89-7.242H254.22a268.764 268.764 0 0 0-37.82 0z m0 0" fill="#20B0E3" p-id="2617"></path><path d="M348.369 447.404a80.468 80.468 0 0 1 55.523 18.507 80.468 80.468 0 0 1 28.164 59.547v80.468a80.468 80.468 0 0 1-16.094 51.5 80.468 80.468 0 0 1-131.968-9.656 104.609 104.609 0 0 1-10.46-54.719v-80.468a80.468 80.468 0 0 1 70.007-67.593z m416.02 0a80.468 80.468 0 0 1 86.102 75.64v80.468a94.148 94.148 0 0 1-12.07 53.11 80.468 80.468 0 0 1-132.773 0 95.757 95.757 0 0 1-12.875-57.133V519.02a80.468 80.468 0 0 1 70.007-70.812z m0 0" fill="#20B0E3" p-id="2618"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://skyhaibara.github.io/en/" >English</option>
+                                
+                                    <option value="https://skyhaibara.github.io/" selected>简体中文</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#kalilinux系统">Kali（Linux系统）</a>
+      <ol>
+        <li><a href="#extundelete">extundelete</a></li>
+        <li><a href="#压缩包套娃">压缩包套娃</a></li>
+        <li><a href="#lsb老色比">LSB（老色比）</a></li>
+      </ol>
+    </li>
+    <li><a href="#traffic流量">Traffic（流量）</a>
+      <ol>
+        <li><a href="#smtp">SMTP</a></li>
+        <li><a href="#tls">TLS</a></li>
+        <li><a href="#smbhascat"><strong>SMB</strong>+hascat</a></li>
+      </ol>
+    </li>
+    <li><a href="#code编码">Code（编码）</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#猪圈密码">猪圈密码：</a></li>
+            <li><a href="#圣堂武士密码猪圈密码的变种">圣堂武士密码（猪圈密码的变种）：</a></li>
+            <li><a href="#小猫密码">小猫密码：</a></li>
+            <li><a href="#五笔密码">五笔密码：</a></li>
+            <li><a href="#提瓦特大陆">提瓦特大陆：</a></li>
+            <li><a href="#古埃及象形文字">古埃及象形文字：</a></li>
+            <li><a href="#外星人密码">外星人密码：</a></li>
+            <li><a href="#克林贡语密码星际迷航">克林贡语密码《星际迷航》：</a></li>
+            <li><a href="#元素周期表">元素周期表：</a></li>
+            <li><a href="#狄德拉字符暗精灵活神">狄德拉字符(暗精灵活神)：</a></li>
+            <li><a href="#银河字母游戏指挥官基恩">银河字母(游戏《指挥官基恩》)：</a></li>
+            <li><a href="#跳舞的小人">跳舞的小人：</a></li>
+            <li><a href="#旗语密码">旗语密码：</a></li>
+            <li><a href="#国际船用信号旗">国际船用信号旗：</a></li>
+            <li><a href="#夏多密码又称曲折密码">夏多密码（又称曲折密码）:</a></li>
+            <li><a href="#多斯拉克语字母表">多斯拉克语字母表：</a></li>
+            <li><a href="#海利亚文字">海利亚文字：</a></li>
+            <li><a href="#covenant字体">Covenant字体：</a></li>
+            <li><a href="#top-cipher">top cipher:</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#matlab---python">Matlab -&gt; Python</a></li>
+    <li><a href="#excel">Excel</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#basecrack40v">basecrack4.0v</a></li>
+    <li><a href="#mimikatz-dmp文件">Mimikatz &ndash;dmp文件</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/ctf-misc/">
+                
+                    <img src="/mc.png" loading="lazy" alt="Featured image of post CTF Misc" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/ctf-misc/">CTF Misc</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 05, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="misc">Misc
+</h1><h2 id="kalilinux系统">Kali（Linux系统）
+</h2><h3 id="extundelete">extundelete
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 在linux上挂载光盘的命令</span>
+</span></span><span class="line"><span class="cl">mkdir /mnt/disk
+</span></span><span class="line"><span class="cl">mount attachment.img /mnt/disk/
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /mnt/disk 
+</span></span><span class="line"><span class="cl"><span class="c1">#可以使用 eog 图片名 命令来查看图片</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#使用结束后用 </span>
+</span></span><span class="line"><span class="cl">umount: /mnt/disk 
+</span></span><span class="line"><span class="cl"><span class="c1">#命令取消挂载</span>
+</span></span><span class="line"><span class="cl">extundelete --restore-all attachment.img
+</span></span><span class="line"><span class="cl"><span class="c1"># 数据恢复成功后会生成一个 RECOVERED_FILES 文件</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="压缩包套娃">压缩包套娃
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">while</span> <span class="o">[</span> <span class="s2">&#34;find . -type f -name &#39;*.tar.xz&#39; | wc -l&#34;</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span> find -type f -name <span class="s2">&#34;*.tar.xz&#34;</span> -exec tar xf <span class="s1">&#39;{}&#39;</span> <span class="se">\;</span> -exec rm -- <span class="s1">&#39;{}&#39;</span> <span class="se">\;</span><span class="p">;</span> <span class="k">done</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">strings flag 查找flag字符
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="lsb老色比">LSB（老色比）
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">zsteg -e <span class="s2">&#34;b8,rgb,lsb,xy&#34;</span> 1.png &gt; diskimage.dat
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">testdisk : testdisk diskimage.dat
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C to copy the selected files, c to copy the current file  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="traffic流量">Traffic（流量）
+</h2><h3 id="smtp">SMTP
+</h3><h3 id="tls">TLS
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-----BEGIN RSA PRIVATE KEY-----
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">XXXXXXX
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-----END RSA PRIVATE KEY-----
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>wireshark 编辑即可</li>
+</ul>
+<h3 id="smbhascat"><strong>SMB</strong>+hascat
+</h3><ul>
+<li>省赛的题目复现，讲一下自己的理解</li>
+</ul>
+<h2 id="code编码">Code（编码）
+</h2><h4 id="猪圈密码">猪圈密码：
+</h4><p><img src="/2.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ul>
+<li><strong>多类变种</strong></li>
+</ul>
+<p><img src="/1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="/3.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ul>
+<li>
+<h4 id="圣堂武士密码猪圈密码的变种">圣堂武士密码（猪圈密码的变种）：
+</h4></li>
+</ul>
+<p><img src="/5.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="小猫密码">小猫密码：
+</h4><p><img src="/1.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="五笔密码">五笔密码：
+</h4><p><img src="/4.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="提瓦特大陆">提瓦特大陆：
+</h4><p><img src="/6.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="古埃及象形文字">古埃及象形文字：
+</h4><p><img src="/7.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="外星人密码">外星人密码：
+</h4><p><img src="/8.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="克林贡语密码星际迷航">克林贡语密码《星际迷航》：
+</h4><p><img src="/9.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="元素周期表">元素周期表：
+</h4><p><img src="/10.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="狄德拉字符暗精灵活神">狄德拉字符(暗精灵活神)：
+</h4><p><img src="/11.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="银河字母游戏指挥官基恩">银河字母(游戏《指挥官基恩》)：
+</h4><p><img src="/12.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="跳舞的小人">跳舞的小人：
+</h4><p><img src="/13.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="旗语密码">旗语密码：
+</h4><p><img src="/14.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="国际船用信号旗">国际船用信号旗：
+</h4><p><img src="/16.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="夏多密码又称曲折密码">夏多密码（又称曲折密码）:
+</h4><p><img src="/17.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>在以上所示的字母表密钥的底部，列有四个附加符号1，2，3，4.他们可以放在密文中的任何地方。每个附加符号指示，如何转动写有密文的纸张，再进行后续的加密或解密操作，直到出现另一个附加符号。
+可以把每个附加符号中的那根线看作是指示针，它指示了纸张的上端朝上，朝下，朝左，朝右。比如说：
+如果出现符号3，那么纸张就应该转动180度，使其上端朝下；
+符号2表示纸张上端朝右；
+符号4表示纸张上端朝左；
+符号1表示纸张上端朝上</p>
+<h4 id="多斯拉克语字母表">多斯拉克语字母表：
+</h4><p><img src="/18.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="海利亚文字">海利亚文字：
+</h4><p><img src="/19.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="covenant字体">Covenant字体：
+</h4><p><img src="/20.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="top-cipher">top cipher:
+</h4><p><img src="/15.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>exp:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cipherList</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;M&#39;</span><span class="p">:</span><span class="s1">&#39;ACEG&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">:</span><span class="s1">&#39;ADEG&#39;</span><span class="p">,</span><span class="s1">&#39;K&#39;</span><span class="p">:</span><span class="s1">&#39;BCEG&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">:</span><span class="s1">&#39;BDEG&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;ACEH&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="s1">&#39;ADEH&#39;</span><span class="p">,</span><span class="s1">&#39;L&#39;</span><span class="p">:</span><span class="s1">&#39;BCEH&#39;</span><span class="p">,</span><span class="s1">&#39;U&#39;</span><span class="p">:</span><span class="s1">&#39;BDEH&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="s1">&#39;ACEI&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;ADEI&#39;</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">:</span><span class="s1">&#39;BCEI&#39;</span><span class="p">,</span><span class="s1">&#39;V&#39;</span><span class="p">:</span><span class="s1">&#39;BDEI&#39;</span><span class="p">,</span><span class="s1">&#39;H&#39;</span><span class="p">:</span><span class="s1">&#39;ACFG&#39;</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="s1">&#39;ADFG&#39;</span><span class="p">,</span><span class="s1">&#39;O&#39;</span><span class="p">:</span><span class="s1">&#39;BCFG&#39;</span><span class="p">,</span><span class="s1">&#39;W&#39;</span><span class="p">:</span><span class="s1">&#39;BDFG&#39;</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">:</span><span class="s1">&#39;ACFH&#39;</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="s1">&#39;ADFH&#39;</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">:</span><span class="s1">&#39;BCFH&#39;</span><span class="p">,</span><span class="s1">&#39;X&#39;</span><span class="p">:</span><span class="s1">&#39;BDFH&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="s1">&#39;ACFI&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">:</span><span class="s1">&#39;ADFI&#39;</span><span class="p">,</span><span class="s1">&#39;Q&#39;</span><span class="p">:</span><span class="s1">&#39;BCFI&#39;</span><span class="p">,</span><span class="s1">&#39;Y&#39;</span><span class="p">:</span><span class="s1">&#39;BDFI&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">flag1</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># s = &#39;BCEHACEIBDEIBDEHBDEHADEIACEGACFIBDFHACEGBCEHBCFIBDEGBDEGADFGBDEHBDEGBDFHBCEGACFIBCFGADEIADEIADFH&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># for i in range(0,len(s),4):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     block = s[i:i+4]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     for j in cipherList:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#         if block==cipherList[j]:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             flag1 += j</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(flag1)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">s2</span> <span class="o">=</span> <span class="s2">&#34;LDVUUCMEXMLQSSFUSXKEOCCG&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">cipherList2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># cipherList2.reverse()</span>
+</span></span><span class="line"><span class="cl"><span class="n">cipherList3</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">flag2</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">cipherList2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="n">j</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rank</span> <span class="o">=</span> <span class="n">cipherList2</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">flag2</span> <span class="o">+=</span> <span class="n">cipherList3</span><span class="p">[</span><span class="n">rank</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">flag2</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="matlab---python">Matlab -&gt; Python
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Matlab" data-lang="Matlab"><span class="line"><span class="cl"><span class="n">fid</span><span class="p">=</span><span class="n">fopen</span><span class="p">(</span><span class="s">&#39;33.wav&#39;</span><span class="p">,</span><span class="s">&#39;rb&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">=</span><span class="n">fread</span><span class="p">(</span><span class="n">fid</span><span class="p">,</span><span class="nb">inf</span><span class="p">,</span><span class="s">&#39;uchar&#39;</span><span class="p">);</span>	
+</span></span><span class="line"><span class="cl"><span class="n">n</span><span class="p">=</span><span class="nb">length</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">-</span><span class="mi">44</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">fclose</span><span class="p">(</span><span class="n">fid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">io</span><span class="p">=</span><span class="n">imread</span><span class="p">(</span><span class="s">&#39;kkk.bmp&#39;</span><span class="p">);</span>	
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">row</span> <span class="n">col</span><span class="p">]=</span><span class="nb">size</span><span class="p">(</span><span class="n">io</span><span class="p">);</span>	# 返回图像尺寸
+</span></span><span class="line"><span class="cl"><span class="n">wi</span><span class="p">=</span><span class="n">io</span><span class="p">(:);</span>	# 二维转一维
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">row</span><span class="o">*</span><span class="n">col</span><span class="o">&gt;</span><span class="n">n</span>
+</span></span><span class="line"><span class="cl"> <span class="n">error</span><span class="p">(</span><span class="s">&#39;文件太小&#39;</span><span class="p">);</span>	# 要隐写的目的文件要够大
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="n">watermarkedaudio</span><span class="p">=</span><span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">watermarklength</span><span class="p">=</span><span class="n">row</span><span class="o">*</span><span class="n">col</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">k</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">row</span><span class="o">*</span><span class="n">col</span>	# 从<span class="mi">1</span>到<span class="n">row</span><span class="o">*</span><span class="n">col</span>
+</span></span><span class="line"><span class="cl"> <span class="n">watermarkedaudio</span><span class="p">(</span><span class="mi">44</span><span class="o">+</span><span class="n">k</span><span class="p">)=</span><span class="n">bitset</span><span class="p">(</span><span class="n">watermarkedaudio</span><span class="p">(</span><span class="mi">44</span><span class="o">+</span><span class="n">k</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">wi</span><span class="p">(</span><span class="n">k</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="n">figure</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="n">plot</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="n">plot</span><span class="p">(</span><span class="n">watermarkedaudio</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">fid</span> <span class="p">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#39;2.wav&#39;</span><span class="p">,</span> <span class="s">&#39;wb&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">fwrite</span><span class="p">(</span><span class="n">fid</span><span class="p">,</span><span class="n">watermarkedaudio</span><span class="p">,</span><span class="s">&#39;uchar&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">fclose</span><span class="p">(</span><span class="n">fid</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>fread : 从二进制文件读取数据</li>
+<li>inf : 读出fid指向的打开的文件的全部数据</li>
+<li>imread : 读取图像</li>
+<li>bitset(A,pos,V) ：将A以二进制来表示，并将第pos个位置（从右数）， 设置为 V 的值，在将所得到的值转换成10进制数并返回。</li>
+<li>figure ：使用默认属性值创建一个新的图窗窗口</li>
+<li>subplot ：将当前图窗划分为 m×n 网格，并在 p 指定的位置创建坐标区</li>
+<li>plot ( Y ) 绘制 Y 对一组隐式 x 坐标的图。
+如果 Y 是向量，则 x 坐标范围从 1 到 length( Y )。
+如果 Y 是矩阵，则对于 Y 中的每个列，图中包含一个对应的行。x 坐标的范围是从 1 到 Y 的行数。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">wav</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;aaa.wav&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">content</span> <span class="o">=</span> <span class="n">wav</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">wav</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">bins</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="o">+</span><span class="mi">388</span><span class="o">*</span><span class="mi">100</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">bins</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">255</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">content</span><span class="p">[</span><span class="n">i</span><span class="p">])[</span><span class="o">-</span><span class="mi">1</span><span class="p">:])</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">flag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">388</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">imgg</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;res.bmp&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="excel">Excel
+</h2><ul>
+<li>将表格全选，选择菜单栏中的， 表单格式 =&gt; 突出显示单元格规则 =&gt; 文本包含</li>
+</ul>
+<p>##pwntools</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">send</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>                        <span class="n">发送数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">sendline</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">:</span>                   <span class="n">发送一行数据</span><span class="err">，</span><span class="n">相当于在末尾加</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>      
+</span></span><span class="line"><span class="cl"><span class="n">recv</span><span class="p">(</span><span class="n">numb</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">default</span><span class="p">)</span> <span class="p">:</span> <span class="n">给出接收字节数</span><span class="p">,</span><span class="n">timeout指定超时</span>
+</span></span><span class="line"><span class="cl"><span class="n">recvuntil</span><span class="p">(</span><span class="n">delims</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="p">:</span>    <span class="n">接收到delims的pattern</span>
+</span></span><span class="line"><span class="cl"><span class="err">（</span><span class="n">以下可以看作until的特例</span><span class="err">）</span>
+</span></span><span class="line"><span class="cl"><span class="n">recvline</span><span class="p">(</span><span class="n">keepends</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="p">:</span>          <span class="n">接收到</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">，keepends指定保留</span><span class="se">\n</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">recvall</span><span class="p">()</span> <span class="p">:</span> <span class="n">接收到EOF</span>
+</span></span><span class="line"><span class="cl"><span class="n">recvrepeat</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">default</span><span class="p">)</span> <span class="p">:</span>      <span class="n">接收到EOF或timeout</span>
+</span></span><span class="line"><span class="cl"><span class="n">interactive</span><span class="p">()</span> <span class="p">:</span>                    <span class="n">与shell交互</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="相关工具使用">相关工具使用
+</h1><h2 id="basecrack40v">basecrack4.0v
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">basecrack</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">m</span> <span class="n">自动化处理</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="mimikatz-dmp文件">Mimikatz &ndash;dmp文件
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sekurlsa::minidump lsass.dmp --加载
+</span></span><span class="line"><span class="cl">sekurlsa::logonpasswords full --导出密码散列值
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>根据CC BY-NC-SA 4.0协议授权</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 skyhaibara
+    </section>
+    
+    <section class="powerby">
+        
+            小哀不是小林 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
