@@ -7,6 +7,14 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>skyhaibara</copyright><atom:link href="https://skyhaibara.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Haibara</title>
+        <link>https://skyhaibara.github.io/p/haibara/</link>
+        <pubDate>Fri, 14 Mar 2025 23:02:28 +0800</pubDate>
+        
+        <guid>https://skyhaibara.github.io/p/haibara/</guid>
+        <description>&lt;img src="https://skyhaibara.github.io/ai.png" alt="Featured image of post Haibara" /&gt;</description>
+        </item>
+        <item>
         <title>CTF Crypto</title>
         <link>https://skyhaibara.github.io/p/ctf-crypto/</link>
         <pubDate>Thu, 13 Mar 2025 18:00:00 +0800</pubDate>
