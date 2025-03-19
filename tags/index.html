@@ -490,7 +490,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.db5ebe3e8b0e9ccee7eb84a2a544484f1ef6b41b5454da0799488aa6a5ae3298.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -502,6 +502,43 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+<script>
+    var pjax = new Pjax({
+        selectors: [
+            ".main-container",
+            ".js-Pjax"
+        ]
+    })
+</script>
+
+<script>
+  pjax._handleResponse = pjax.handleResponse;
+  pjax.handleResponse = function(responseText, request, href, options) {
+      if (request.responseText.match("<html")) {
+          if (responseText) {
+              
+              let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+              
+              let bodyClass = newDom.body.className;
+              document.body.setAttribute("class", bodyClass)
+          }
+          
+          pjax._handleResponse(responseText, request, href, options);
+      } else {
+          
+      }
+  }
+</script>
+
+<script>
+  document.addEventListener('pjax:complete', () => {
+      
+      window.Stack.init();
+  })
+</script>
+
+
 <script>
   const cdnPath = "https://cdn.jsdelivr.net/gh/skyhaibara/hugo-live2d@master";
   const cssPath = "https://skyhaibara.github.io/waifu/waifu.css";
@@ -814,8 +851,35 @@
     width: 100%;
     z-index: -1;
   }
-</style>
-
-
+</style><div class="js-Pjax">
+<script>
+    (function () {
+        
+        let comment = document.querySelector(".comment");
+        if (!comment) {
+            return
+        }
+        let script = document.createElement('script');
+        
+        script.setAttribute('src', 'https://giscus.app/client.js');
+        script.setAttribute('data-repo', 'skyhaibara\/github_hugo');
+        script.setAttribute('data-repo-id', 'R_kgDOOATInQ');
+        script.setAttribute('data-category', 'General');
+        script.setAttribute('data-category-id', 'DIC_kwDOOATInc4CnytA');
+        script.setAttribute('data-mapping', 'pathname');
+        script.setAttribute('data-strict', '0');
+        script.setAttribute('data-reactions-enabled', '1');
+        script.setAttribute('data-emit-metadata', '0');
+        script.setAttribute('data-input-position', 'top');
+        script.setAttribute('data-theme', 'preferred_color_scheme');
+        script.setAttribute('data-lang', 'en');
+        script.setAttribute('data-loading', '');
+        script.setAttribute('crossorigin', 'anonymous');
+        script.async = true;
+        
+        document.querySelector('.site-footer').before(script)
+    })(document);
+</script>
+<div>
     </body>
 </html>
