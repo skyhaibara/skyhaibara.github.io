@@ -15,6 +15,113 @@
 <meta name="twitter:description" content="Misc Kali（Linux系统） extundelete 1 2 3 4 5 6 7 8 9 10 # 在linux上挂载光盘的命令 mkdir /mnt/disk mount attachment.img /mnt/disk/ cd /mnt/disk #可以使用 eog 图片名 命令来查看图片 #使用结束后用 umount: /mnt/disk #命令取消挂载 extundelete --restore-all attachment.img # 数据恢复成功后会生成一个 RECOVERED_FILES 文件 压缩包套娃 1 2 while [ &#34;find . -type f -name &#39;*.tar.xz&#39; | wc -l&#34; -gt 0 ]; do find -type f -name &#34;*.tar.xz&#34; -exec tar xf &#39;{}&#39; \\; -exec rm -- &#39;{}&#39; \\;; done; strings flag 查找flag字符 LSB（老色比） 1 2 3 4 5 zsteg -e &#34;b8,rgb,lsb,xy&#34; 1.png &gt; diskimage.dat testdisk : testdisk diskimage.dat C to copy the selected files, c to copy the current file Traffic（流量） SMTP TLS 1 2 3 4 5 -----BEGIN RSA PRIVATE KEY----- XXXXXXX -----END RSA PRIVATE KEY----- wireshark 编辑即可 SMB+hascat 省赛的题目复现，讲一下自己的理解 Code（编码） 猪圈密码： "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://skyhaibara.github.io/Mc.png' />
     <link rel="shortcut icon" href="/haibara.ico" />
+<div class="loading">
+    <div class="loader">
+        <div class="face">
+            <div class="circle"></div>
+        </div>
+        <div class="face">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background-color: #f5f5fa;
+    }
+    .loader {
+    width: 6em;
+    height: 6em;
+    font-size: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .loader .face {
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    animation: animate023845 3s linear infinite;
+    }
+
+    .loader .face:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    color: gold;
+    border-color: currentColor transparent transparent currentColor;
+    border-width: 0.2em 0.2em 0em 0em;
+    --deg: -45deg;
+    animation-direction: normal;
+    }
+
+    .loader .face:nth-child(2) {
+    width: 70%;
+    height: 70%;
+    color: lime;
+    border-color: currentColor currentColor transparent transparent;
+    border-width: 0.2em 0em 0em 0.2em;
+    --deg: -135deg;
+    animation-direction: reverse;
+    }
+
+    .loader .face .circle {
+    position: absolute;
+    width: 50%;
+    height: 0.1em;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    transform: rotate(var(--deg));
+    transform-origin: left;
+    }
+
+    .loader .face .circle::before {
+    position: absolute;
+    top: -0.5em;
+    right: -0.5em;
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    border-radius: 50%;
+    box-shadow: 0 0 2em,
+                    0 0 4em,
+                    0 0 6em,
+                    0 0 8em,
+                    0 0 10em,
+                    0 0 0 0.5em rgba(255, 255, 0, 0.1);
+    }
+
+    @keyframes animate023845 {
+    to {
+        transform: rotate(1turn);
+    }
+    }
+</style>
+
+<script>	
+    function initLoading() {
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            loading.style.display = "none";
+        });
+    }
+
+    initLoading();
+</script>
 
     </head>
     <body class="
@@ -1125,13 +1232,13 @@
 </script>
 <script>
   const cdnPath = "https://cdn.jsdelivr.net/gh/skyhaibara/hugo-live2d@master";
+  const cssPath = "https://skyhaibara.github.io/waifu/waifu.css";
+  const tipsJsonPath = "https://skyhaibara.github.io/waifu/waifu-tips.json";
   const config = {
     
     path: {
       homePath: "/",
       modelPath: cdnPath + "/Resources/",
-      cssPath: cdnPath + "/waifu.css",
-      tipsJsonPath: cdnPath + "/waifu-tips.json",
       tipsJsPath: cdnPath + "/waifu-tips.js",
       live2dCorePath: cdnPath + "/Core/live2dcubismcore.js",
       live2dSdkPath: cdnPath + "/live2d-sdk.js"
@@ -1149,13 +1256,13 @@
   
   if (screen.width >= 768) {
     Promise.all([
-      loadExternalResource(config.path.cssPath, "css"),
+      loadExternalResource(cssPath, "css"),
       loadExternalResource(config.path.live2dCorePath, "js"),
       loadExternalResource(config.path.live2dSdkPath, "js"),
       loadExternalResource(config.path.tipsJsPath, "js")
     ]).then(() => {
       initWidget({
-        waifuPath: config.path.tipsJsonPath,
+        waifuPath: tipsJsonPath,
         cdnPath: config.path.modelPath,
         tools: config.tools,
         dragEnable: config.drag.enable,

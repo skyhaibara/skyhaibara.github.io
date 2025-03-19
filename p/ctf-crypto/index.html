@@ -15,6 +15,113 @@
 <meta name="twitter:description" content="zyt大佬捏：horostal.github.io\nVirgenene(维吉尼亚) 取一个长度为$x$的$key$，则在每一个长度为$x$的明文区间内，每一个字母本身都在进行凯撒式移位加密。例如选取$key$为vector，则对应数字为(21, 4, 2, 19, 14, 17)，之后对明文进行加密：\n1 2 3 (明文) h e r e i s h o w i t w o r k s (密钥) 21 4 2 19 14 17 21 4 2 19 14 17 21 4 2 19 (密文) c i t x w j c s y b h n j v m l 那如果有密文，可以通过猜测明文前几位算出$key$，找到循环点并截取出正确的$key$，在进行解密即可。推荐一个爆破维吉尼亚的网站：https://www.guballa.de/vigenere-solver，下面是自己手撸的加解密和猜测密钥。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 def encode(plaintext, key): li = [] j = 0 for i in range(len(plaintext)): if &#39;a&#39; &lt;= plaintext[i] &lt;= &#39;z&#39;: li.append(chr((ord(plaintext[i]) - ord(&#39;a&#39;) + ord(key[j].lower()) - ord(&#39;a&#39;)) % 26 + ord(&#39;a&#39;))) j = (j + 1) % len(key) elif &#39;A&#39; &lt;= plaintext[i] &lt;= &#39;Z&#39;: li.append(chr((ord(plaintext[i]) - ord(&#39;A&#39;) + ord(key[j].upper()) - ord(&#39;A&#39;)) % 26 + ord(&#39;A&#39;))) j = (j + 1) % len(key) else: li.append(plaintext[i]) print(&#39;&#39;.join(li)) # print(&#39;&#39;.join([chr((ord(st[i]) - ord(&#39;a&#39;) + ord(s[i % len(s)]) - ord(&#39;a&#39;)) % 26 + ord(&#39;a&#39;)) for i in range(len(st))])) def decode(ciphertext, key): li = [] j = 0 for i in range(len(ciphertext)): if &#39;a&#39; &lt;= ciphertext[i] &lt;= &#39;z&#39;: li.append(chr((ord(ciphertext[i]) - ord(key[j].lower())) % 26 + ord(&#39;a&#39;))) j = (j + 1) % len(key) elif &#39;A&#39; &lt;= ciphertext[i] &lt;= &#39;Z&#39;: li.append(chr((ord(ciphertext[i]) - ord(key[j].upper())) % 26 + ord(&#39;A&#39;))) j = (j + 1) % len(key) else: li.append(ciphertext[i]) print(&#39;&#39;.join(li)) # print(&#39;&#39;.join([chr((ord(t[i]) - ord(&#39;a&#39;) - ord(s[i % len(s)]) + ord(&#39;a&#39;)) % 26 + ord(&#39;a&#39;)) for i in range(len(t))])) def check(plaintext, ciphertext): t = min(len(plaintext), len(ciphertext)) li = [] for i in range(t): if &#39;a&#39; &lt;= ciphertext[i] &lt;= &#39;z&#39;: li.append(chr((ord(ciphertext[i]) - ord(plaintext[i].lower())) % 26 + ord(&#39;a&#39;))) elif &#39;A&#39; &lt;= ciphertext[i] &lt;= &#39;Z&#39;: li.append(chr((ord(ciphertext[i]) - ord(plaintext[i].upper())) % 26 + ord(&#39;A&#39;))) else: continue return &#39;&#39;.join(li) # &#39;&#39;.join([chr((ord(ciphertext[i]) - ord(plaintext[i])) % 26 + ord(&#39;a&#39;)) for i in range(t)]) "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://skyhaibara.github.io/Zs.png' />
     <link rel="shortcut icon" href="/haibara.ico" />
+<div class="loading">
+    <div class="loader">
+        <div class="face">
+            <div class="circle"></div>
+        </div>
+        <div class="face">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background-color: #f5f5fa;
+    }
+    .loader {
+    width: 6em;
+    height: 6em;
+    font-size: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .loader .face {
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    animation: animate023845 3s linear infinite;
+    }
+
+    .loader .face:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    color: gold;
+    border-color: currentColor transparent transparent currentColor;
+    border-width: 0.2em 0.2em 0em 0em;
+    --deg: -45deg;
+    animation-direction: normal;
+    }
+
+    .loader .face:nth-child(2) {
+    width: 70%;
+    height: 70%;
+    color: lime;
+    border-color: currentColor currentColor transparent transparent;
+    border-width: 0.2em 0em 0em 0.2em;
+    --deg: -135deg;
+    animation-direction: reverse;
+    }
+
+    .loader .face .circle {
+    position: absolute;
+    width: 50%;
+    height: 0.1em;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    transform: rotate(var(--deg));
+    transform-origin: left;
+    }
+
+    .loader .face .circle::before {
+    position: absolute;
+    top: -0.5em;
+    right: -0.5em;
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    border-radius: 50%;
+    box-shadow: 0 0 2em,
+                    0 0 4em,
+                    0 0 6em,
+                    0 0 8em,
+                    0 0 10em,
+                    0 0 0 0.5em rgba(255, 255, 0, 0.1);
+    }
+
+    @keyframes animate023845 {
+    to {
+        transform: rotate(1turn);
+    }
+    }
+</style>
+
+<script>	
+    function initLoading() {
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            loading.style.display = "none";
+        });
+    }
+
+    initLoading();
+</script>
 
     </head>
     <body class="
@@ -709,13 +816,13 @@
 </script>
 <script>
   const cdnPath = "https://cdn.jsdelivr.net/gh/skyhaibara/hugo-live2d@master";
+  const cssPath = "https://skyhaibara.github.io/waifu/waifu.css";
+  const tipsJsonPath = "https://skyhaibara.github.io/waifu/waifu-tips.json";
   const config = {
     
     path: {
       homePath: "/",
       modelPath: cdnPath + "/Resources/",
-      cssPath: cdnPath + "/waifu.css",
-      tipsJsonPath: cdnPath + "/waifu-tips.json",
       tipsJsPath: cdnPath + "/waifu-tips.js",
       live2dCorePath: cdnPath + "/Core/live2dcubismcore.js",
       live2dSdkPath: cdnPath + "/live2d-sdk.js"
@@ -733,13 +840,13 @@
   
   if (screen.width >= 768) {
     Promise.all([
-      loadExternalResource(config.path.cssPath, "css"),
+      loadExternalResource(cssPath, "css"),
       loadExternalResource(config.path.live2dCorePath, "js"),
       loadExternalResource(config.path.live2dSdkPath, "js"),
       loadExternalResource(config.path.tipsJsPath, "js")
     ]).then(() => {
       initWidget({
-        waifuPath: config.path.tipsJsonPath,
+        waifuPath: tipsJsonPath,
         cdnPath: config.path.modelPath,
         tools: config.tools,
         dragEnable: config.drag.enable,
