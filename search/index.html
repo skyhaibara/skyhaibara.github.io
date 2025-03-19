@@ -323,38 +323,38 @@
     }());
 </script>
 <script>
-  const cdnPath = "https://cdn.jsdelivr.net/gh/letere-gzj/live2d-widget-v3@main";
+  const cdnPath = "https://cdn.jsdelivr.net/gh/skyhaibara/hugo-live2d@master";
   const config = {
     
     path: {
       homePath: "/",
       modelPath: cdnPath + "/Resources/",
+      cssPath: cdnPath + "/waifu.css",
+      tipsJsonPath: cdnPath + "/waifu-tips.json",
       tipsJsPath: cdnPath + "/waifu-tips.js",
       live2dCorePath: cdnPath + "/Core/live2dcubismcore.js",
       live2dSdkPath: cdnPath + "/live2d-sdk.js"
     },
     
-    tools: ["hitokoto", "asteroids", "express", "switch-model", "switch-texture", "photo", "info", "quit"],
+    tools: ["hitokoto", "express", "switch-model", "info", "quit"],
     
     drag: {
       enable: true,
-      direction: ["x", "y"]
+      direction: ["x"]
     },
     
     switchType: "order"
   }
-  const cssPath = "https://skyhaibara.github.io/waifu/waifu.css"
-  const tipsJsonPath = "https://skyhaibara.github.io/waifu/waifu-tips.json"
   
   if (screen.width >= 768) {
     Promise.all([
-      loadExternalResource(cssPath, "css"),
+      loadExternalResource(config.path.cssPath, "css"),
       loadExternalResource(config.path.live2dCorePath, "js"),
       loadExternalResource(config.path.live2dSdkPath, "js"),
       loadExternalResource(config.path.tipsJsPath, "js")
     ]).then(() => {
       initWidget({
-        waifuPath: tipsJsonPath,
+        waifuPath: config.path.tipsJsonPath,
         cdnPath: config.path.modelPath,
         tools: config.tools,
         dragEnable: config.drag.enable,
@@ -363,6 +363,50 @@
       });
     });
   }
+  function initWaifuMouseEvent() {
+        const waifu = document.getElementById("waifu");
+        let isDown = false;
+        let waifuLeft;
+        let mouseLeft;
+        
+        
+        
+        waifu.onmousedown = function (e) {
+            isDown = true;
+            
+            waifuLeft = waifu.offsetLeft;
+            mouseLeft = e.clientX;
+            
+            
+            
+        }
+        
+        window.onmousemove = function (e) {
+            if (!isDown) {
+                return;
+            }
+            
+            let currentLeft = waifuLeft + (e.clientX - mouseLeft);
+            if (currentLeft < 0) {
+                currentLeft = 0;
+            } else if (currentLeft > window.innerWidth - 300) {
+                currentLeft = window.innerWidth - 300;
+            }
+            waifu.style.left = currentLeft  + "px";
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+        
+        window.onmouseup = function (e) {
+            isDown = false;
+        }
+    }
 
   
   function loadExternalResource(url, type) {
