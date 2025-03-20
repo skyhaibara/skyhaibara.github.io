@@ -536,7 +536,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.db5ebe3e8b0e9ccee7eb84a2a544484f1ef6b41b5454da0799488aa6a5ae3298.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.3aaf22d6e55e5672cc0bdfb5656a8a8872fba07eee39285f7fbe0ad5f6cf72ea.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -583,6 +583,7 @@
   }
 </script>
 
+
 <script>
     
   topbar.config({
@@ -595,7 +596,9 @@
       
       topbar.show();
   })
-  
+</script>
+
+<script>
   document.addEventListener('pjax:complete', () => {
       
       window.Stack.init();
@@ -938,5 +941,41 @@
       })(document);
   </script>
 <div><script defer src="https://cn.vercount.one/js"></script>
+
+<script>
+    async function renderKaTeX() {
+        
+        let katex = document.querySelector(".math-katex");
+        if (!katex) {
+            return;
+        }
+        
+        while (typeof renderMathInElement !== 'function') {
+            await delay(500);
+        }        
+        
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });
+    }
+    
+    
+
+    function delay(time) {
+        return new Promise(resolve => {
+            setTimeout(resolve, time)
+        })
+    }
+
+    document.addEventListener('pjax:complete', () => {
+        renderKaTeX();
+    })
+</script>
     </body>
 </html>
