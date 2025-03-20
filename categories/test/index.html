@@ -2,18 +2,18 @@
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="This is an example category">
-<title>Category: Test - skyhaibara</title>
+<title>Category: 归档 - skyhaibara</title>
 
 <link rel='canonical' href='https://skyhaibara.github.io/categories/test/'>
 
-<link rel="stylesheet" href="/scss/style.min.f5a2769da230a21a8a3493a81c0abe7272ae1b63ab397eb7388944be7a20960e.css"><meta property='og:title' content="Category: Test - skyhaibara">
+<link rel="stylesheet" href="/scss/style.min.f5a2769da230a21a8a3493a81c0abe7272ae1b63ab397eb7388944be7a20960e.css"><meta property='og:title' content="Category: 归档 - skyhaibara">
 <meta property='og:description' content="This is an example category">
 <meta property='og:url' content='https://skyhaibara.github.io/categories/test/'>
 <meta property='og:site_name' content='skyhaibara'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-03-16T22:36:50&#43;08:00 '/><meta property='og:image' content='https://skyhaibara.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg' />
-<meta name="twitter:title" content="Category: Test - skyhaibara">
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-03-20T20:12:52&#43;08:00 '/><meta property='og:image' content='https://skyhaibara.github.io/categories/test/%E6%A4%BF.png' />
+<meta name="twitter:title" content="Category: 归档 - skyhaibara">
 <meta name="twitter:description" content="This is an example category"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://skyhaibara.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://skyhaibara.github.io/categories/test/index.xml">
+    <meta name="twitter:image" content='https://skyhaibara.github.io/categories/test/%E6%A4%BF.png' /><link rel="alternate" type="application/rss&#43;xml" href="https://skyhaibara.github.io/categories/test/index.xml">
     <link rel="shortcut icon" href="/haibara.ico" />
 <div class="loading">
     <div class="loader">
@@ -36,67 +36,76 @@
         left: 0;
         width: 100%;
         height: 100%;
+        zoom: 3.0;
         z-index: 99;
-        background-color: #f5f5fa;
+        background-color: #000000;
     }
     .loader {
-    width: 6em;
-    height: 6em;
-    font-size: 10px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        width: 6em;
+        height: 6em;
+        font-size: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .loader .face {
-    position: absolute;
-    border-radius: 50%;
-    border-style: solid;
-    animation: animate023845 3s linear infinite;
+        position: absolute;
+        border-radius: 50%;
+        border-style: solid;
+        animation: animate023845 3s linear infinite;
+    }
+
+    .animated-stop {
+        animation-play-state: paused !important;
+    }
+	
+    .scaleAndFadeout {
+        animation: scaleAndFadeOut 1.5s forwards;
     }
 
     .loader .face:nth-child(1) {
-    width: 100%;
-    height: 100%;
-    color: gold;
-    border-color: currentColor transparent transparent currentColor;
-    border-width: 0.2em 0.2em 0em 0em;
-    --deg: -45deg;
-    animation-direction: normal;
+        width: 100%;
+        height: 100%;
+        color: gold;
+        border-color: currentColor transparent transparent currentColor;
+        border-width: 0.2em 0.2em 0em 0em;
+        --deg: -45deg;
+        animation-direction: normal;
     }
 
     .loader .face:nth-child(2) {
-    width: 70%;
-    height: 70%;
-    color: lime;
-    border-color: currentColor currentColor transparent transparent;
-    border-width: 0.2em 0em 0em 0.2em;
-    --deg: -135deg;
-    animation-direction: reverse;
+        width: 70%;
+        height: 70%;
+        color: lime;
+        border-color: currentColor currentColor transparent transparent;
+        border-width: 0.2em 0em 0em 0.2em;
+        --deg: -135deg;
+        animation-direction: reverse;
     }
 
     .loader .face .circle {
-    position: absolute;
-    width: 50%;
-    height: 0.1em;
-    top: 50%;
-    left: 50%;
-    background-color: transparent;
-    transform: rotate(var(--deg));
-    transform-origin: left;
+        position: absolute;
+        width: 50%;
+        height: 0.1em;
+        top: 50%;
+        left: 50%;
+        background-color: transparent;
+        transform: rotate(var(--deg));
+        transform-origin: left;
     }
 
     .loader .face .circle::before {
-    position: absolute;
-    top: -0.5em;
-    right: -0.5em;
-    content: '';
-    width: 1em;
-    height: 1em;
-    background-color: currentColor;
-    border-radius: 50%;
-    box-shadow: 0 0 2em,
+        position: absolute;
+        top: -0.5em;
+        right: -0.5em;
+        content: '';
+        width: 1em;
+        height: 1em;
+        background-color: currentColor;
+        border-radius: 50%;
+        box-shadow: 0 0 2em,
                     0 0 4em,
                     0 0 6em,
                     0 0 8em,
@@ -105,9 +114,14 @@
     }
 
     @keyframes animate023845 {
-    to {
-        transform: rotate(1turn);
-    }
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
     }
 </style>
 
@@ -122,7 +136,6 @@
 
     initLoading();
 </script>
-
     </head>
     <body class="">
     <script>
@@ -184,14 +197,14 @@
             
                 <li>
                     <a 
-                        href='https://bilibili.com'
+                        href='https://space.bilibili.com/40026657'
                         target="_blank"
                         title="bilibili"
                         rel="me"
                     >
                         
                         
-                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1741873081290" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2087" width="28" height="28" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M347.2384 196.5056l110.592 110.6944h108.2368l110.6944-110.6944c13.312-13.312 34.9184-13.312 48.3328 0 13.312 13.312 13.312 34.9184 0 48.3328l-62.464 62.3616h71.168c65.9456 0 119.5008 53.4528 119.5008 119.5008v273.1008c0 65.9456-53.4528 119.5008-119.5008 119.5008H290.0992c-65.9456 0-119.5008-53.4528-119.5008-119.5008V426.7008c0-65.9456 53.4528-119.5008 119.5008-119.5008h71.168l-62.3616-62.464c-13.312-13.312-13.312-34.9184 0-48.3328 13.312-13.312 34.9184-13.312 48.3328 0.1024z m386.6624 178.9952H290.0992c-26.4192 0-48.4352 20.0704-50.9952 46.2848l-0.2048 4.9152v273.1008c0 26.4192 20.0704 48.4352 46.2848 50.9952l4.9152 0.2048h443.6992c26.4192 0 48.4352-20.0704 50.9952-46.2848l0.2048-4.9152V426.7008c0.1024-28.2624-22.8352-51.2-51.0976-51.2z m-358.4 102.4c18.8416 0 34.0992 15.2576 34.0992 34.0992v68.3008c0 18.8416-15.2576 34.0992-34.0992 34.0992s-34.0992-15.2576-34.0992-34.0992V512c-0.1024-18.8416 15.2576-34.0992 34.0992-34.0992z m272.9984 0c18.8416 0 34.0992 15.2576 34.0992 34.0992v68.3008c0 18.8416-15.2576 34.0992-34.0992 34.0992S614.4 599.1424 614.4 580.3008V512c0-18.8416 15.2576-34.0992 34.0992-34.0992z" fill="#bfbfbf" p-id="2088"></path></svg>
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742472043055" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="856" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M347.2384 196.5056l110.592 110.6944h108.2368l110.6944-110.6944c13.312-13.312 34.9184-13.312 48.3328 0 13.312 13.312 13.312 34.9184 0 48.3328l-62.464 62.3616h71.168c65.9456 0 119.5008 53.4528 119.5008 119.5008v273.1008c0 65.9456-53.4528 119.5008-119.5008 119.5008H290.0992c-65.9456 0-119.5008-53.4528-119.5008-119.5008V426.7008c0-65.9456 53.4528-119.5008 119.5008-119.5008h71.168l-62.3616-62.464c-13.312-13.312-13.312-34.9184 0-48.3328 13.312-13.312 34.9184-13.312 48.3328 0.1024z m386.6624 178.9952H290.0992c-26.4192 0-48.4352 20.0704-50.9952 46.2848l-0.2048 4.9152v273.1008c0 26.4192 20.0704 48.4352 46.2848 50.9952l4.9152 0.2048h443.6992c26.4192 0 48.4352-20.0704 50.9952-46.2848l0.2048-4.9152V426.7008c0.1024-28.2624-22.8352-51.2-51.0976-51.2z m-358.4 102.4c18.8416 0 34.0992 15.2576 34.0992 34.0992v68.3008c0 18.8416-15.2576 34.0992-34.0992 34.0992s-34.0992-15.2576-34.0992-34.0992V512c-0.1024-18.8416 15.2576-34.0992 34.0992-34.0992z m272.9984 0c18.8416 0 34.0992 15.2576 34.0992 34.0992v68.3008c0 18.8416-15.2576 34.0992-34.0992 34.0992S614.4 599.1424 614.4 580.3008V512c0-18.8416 15.2576-34.0992 34.0992-34.0992z" fill="#c1c1c1" p-id="857"></path></svg>
                         
                     </a>
                 </li>
@@ -233,6 +246,20 @@
 
 
 
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://letere-gzj.github.io/hugo-stack/'
+                        target="_blank"
+                        title="借鉴letere大佬的创作"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742471903263" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4384" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M513.066667 554.666667a21.333333 21.333333 0 0 1 21.333333 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333333 21.333333H341.333333c-79.573333 0-146.346667 54.4-165.333333 128A175.488 175.488 0 0 0 170.666667 810.666667v42.666666h342.4a21.333333 21.333333 0 0 1 21.333333 21.333334v42.666666a21.333333 21.333333 0 0 1-21.333333 21.333334H128c-23.466667 0-42.666667-19.093333-42.666667-42.666667v-85.333333c0-141.376 114.56-256 256-256h171.733334z m271.530666-15.082667l150.848 150.848a21.333333 21.333333 0 0 1 0 30.165333l-30.165333 30.165334a21.333333 21.333333 0 0 1-30.165333 0l-62.656-62.656v220.373333a21.333333 21.333333 0 0 1-21.333334 21.333333h-42.666666a21.333333 21.333333 0 0 1-21.333334-21.333333V687.552l-63.210666 63.232a21.333333 21.333333 0 0 1-30.165334 0l-30.165333-30.165333a21.333333 21.333333 0 0 1 0-30.165334l150.848-150.848a21.333333 21.333333 0 0 1 30.165333 0v-0.021333zM448 64c117.76 0 213.333333 95.509333 213.333333 213.333333s-95.573333 213.333333-213.333333 213.333334-213.333333-95.509333-213.333333-213.333334S330.24 64 448 64z m0 85.333333c-70.613333 0-128 57.301333-128 128s57.386667 128 128 128 128-57.301333 128-128-57.386667-128-128-128z" p-id="4385" fill="#c1c1c1"></path></svg>
                         
                     </a>
                 </li>
@@ -280,7 +307,7 @@
         </li>
         
         
-        <li >
+        <li  class='current' >
             <a href='/archives/' >
                 
                 
@@ -457,13 +484,13 @@
         <div class="section-card">
             <div class="section-details">
                 <h3 class="section-count">0 个页面</h3>
-                <h1 class="section-term">Test</h1>
+                <h1 class="section-term">归档</h1>
                 
                     <h2 class="section-description">This is an example category</h2>
                 
             </div>
                 <div class="section-image">
-                    <img src="/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash_hu_30cc804daec7a86b.jpg" 
+                    <img src="/categories/test/%E6%A4%BF_hu_64c7dfccac94b271.png" 
                             width="120"
                             height="120" 
                             loading="lazy">
@@ -513,6 +540,11 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
+    
+    <script src=https://skyhaibara.github.io/js/topbar.min.js></script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
 <script>
     var pjax = new Pjax({
@@ -540,15 +572,24 @@
           
       }
   }
-</script>
-
-<script>
+    
+  topbar.config({
+    barColors: {
+        '0': 'rgba(255,  255, 255, 1)',
+        '1.0': 'rgba(139, 0, 139, 0)'
+  })
+	
+  document.addEventListener('pjax:send', () => {
+      
+      topbar.show();
+  })
+  
   document.addEventListener('pjax:complete', () => {
       
       window.Stack.init();
+      topbar.hide();
   })
 </script>
-
 
 <script>
   const cdnPath = "https://cdn.jsdelivr.net/gh/skyhaibara/hugo-live2d@master";
@@ -660,7 +701,7 @@
 
 
 <style>
-	  @font-face {
+	@font-face {
     font-family: '⚪';
     src: url(https://skyhaibara.github.io/font/RawMarukoGothicCJKtc-Regular.ttf) format('truetype');
   }
@@ -669,17 +710,14 @@
     --base-font-family: '⚪';
     --code-font-family: '⚪';
   }
-</style>
-
-<style>
-    #TableOfContents > ul, ol {
-        ul, ol {
-            display: none;
-        }
-        .open {
-            display: block;
-        }
-    }
+  #TableOfContents > ul, ol {
+      ul, ol {
+          display: none;
+      }
+      .open {
+          display: block;
+      }
+  }
 </style>
 
 <script>
@@ -754,9 +792,7 @@
             }
         };
     }
-
     
-
     function backToTop(){
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
@@ -805,6 +841,13 @@
         width: 22px;
         height: 16px;
     }
+    #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
 </style>
 
 <script>
@@ -848,49 +891,40 @@
 <div id="particles-js"></div>
 
 <script src=https://skyhaibara.github.io/background/particles.min.js></script>
+
 <script>
   particlesJS.load('particles-js', "https://skyhaibara.github.io/background/particlesjs-config.json", function() {
     console.log('particles.js loaded - callback');
   });
-</script>
-
-<style>
-  #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-</style><div class="js-Pjax">
-<script>
-    (function () {
-        
-        let comment = document.querySelector(".comment");
-        if (!comment) {
-            return
-        }
-        let script = document.createElement('script');
-        
-        script.setAttribute('src', 'https://giscus.app/client.js');
-        script.setAttribute('data-repo', 'skyhaibara\/github_hugo');
-        script.setAttribute('data-repo-id', 'R_kgDOOATInQ');
-        script.setAttribute('data-category', 'General');
-        script.setAttribute('data-category-id', 'DIC_kwDOOATInc4CnytA');
-        script.setAttribute('data-mapping', 'pathname');
-        script.setAttribute('data-strict', '0');
-        script.setAttribute('data-reactions-enabled', '1');
-        script.setAttribute('data-emit-metadata', '0');
-        script.setAttribute('data-input-position', 'top');
-        script.setAttribute('data-theme', 'preferred_color_scheme');
-        script.setAttribute('data-lang', 'en');
-        script.setAttribute('data-loading', '');
-        script.setAttribute('crossorigin', 'anonymous');
-        script.async = true;
-        
-        document.querySelector('.site-footer').before(script)
-    })(document);
-</script>
+</script><div class="js-Pjax">
+  <script>
+      (function () {
+          
+          let comment = document.querySelector(".comment");
+          if (!comment) {
+              return
+          }
+          let script = document.createElement('script');
+          
+          script.setAttribute('src', 'https://giscus.app/client.js');
+          script.setAttribute('data-repo', 'skyhaibara\/github_hugo');
+          script.setAttribute('data-repo-id', 'R_kgDOOATInQ');
+          script.setAttribute('data-category', 'General');
+          script.setAttribute('data-category-id', 'DIC_kwDOOATInc4CnytA');
+          script.setAttribute('data-mapping', 'pathname');
+          script.setAttribute('data-strict', '0');
+          script.setAttribute('data-reactions-enabled', '1');
+          script.setAttribute('data-emit-metadata', '0');
+          script.setAttribute('data-input-position', 'top');
+          script.setAttribute('data-theme', 'preferred_color_scheme');
+          script.setAttribute('data-lang', 'en');
+          script.setAttribute('data-loading', '');
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          
+          document.querySelector('.site-footer').before(script)
+      })(document);
+  </script>
 <div>
     </body>
 </html>
