@@ -919,8 +919,6 @@
     <script src=https://skyhaibara.github.io/js/topbar.min.js></script>
 
 
-<script defer src="https://cn.vercount.one/js"></script>
-
 <script>
   
   topbar.config({
@@ -966,5 +964,26 @@
         topbar.hide();
     })
 </script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+
+<script>
+  function showHideView() {
+      
+      let viewCounts = document.querySelectorAll("#viewCount");
+      if (viewCounts) {
+          
+          let article =  document.querySelector(".article-page");
+          if (!article) {
+              viewCounts.forEach(ele => {
+                  ele.style.display = 'none';
+              });
+          }
+      }
+  }
+  
+  showHideView();
+</script>
+
     </body>
 </html>
