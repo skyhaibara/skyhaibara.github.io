@@ -111,17 +111,6 @@
                     0 0 10em,
                     0 0 0 0.5em rgba(255, 255, 0, 0.1);
     }
-
-    @keyframes animate023845 {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(1.5);
-            opacity: 0;
-        }
-    }
 </style>
 
 <script>	
@@ -579,11 +568,6 @@
         document.head.appendChild(customFont);
     }());
 </script>
-
-    
-    <script src=https://skyhaibara.github.io/js/topbar.min.js></script>
-
-
 <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
 
 <script>
@@ -614,26 +598,10 @@
   }
 </script>
 
-
-<script>
-    
-  topbar.config({
-    barColors: {
-        '0': 'rgba(255,  255, 255, 1)',
-        '1.0': 'rgba(139, 0, 139, 0)'
-  })
-	
-  document.addEventListener('pjax:send', () => {
-      
-      topbar.show();
-  })
-</script>
-
 <script>
   document.addEventListener('pjax:complete', () => {
       
       window.Stack.init();
-      topbar.hide();
   })
 </script>
 
@@ -971,9 +939,26 @@
           document.querySelector('.site-footer').before(script)
       })(document);
   </script>
-<div><script defer src="https://cn.vercount.one/js"></script>
+<div>
+    
+    <script src=https://skyhaibara.github.io/js/topbar.min.js></script>
+
+
+<script defer src="https://cn.vercount.one/js"></script>
 
 <script>
+  
+  topbar.config({
+      barColors: {
+          '0': 'rgba(255,  255, 255, 1)', 
+          '1.0': 'rgba(139, 0, 139, 0)' 
+      }
+  })
+
+  document.addEventListener('pjax:send', () => {
+      
+      topbar.show();
+  })
     async function renderKaTeX() {
         
         let katex = document.querySelector(".math-katex");
@@ -995,9 +980,6 @@
             ignoredClasses: ["gist"]
         });
     }
-    
-    
-
     function delay(time) {
         return new Promise(resolve => {
             setTimeout(resolve, time)
@@ -1006,6 +988,7 @@
 
     document.addEventListener('pjax:complete', () => {
         renderKaTeX();
+        topbar.hide();
     })
 </script>
     </body>
