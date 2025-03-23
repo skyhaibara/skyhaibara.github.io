@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on skyhaibara</title>
-        <link>https://skyhaibara.github.io/post/</link>
-        <description>Recent content in Posts on skyhaibara</description>
+        <title>CTF on skyhaibara</title>
+        <link>https://skyhaibara.github.io/categories/ctf/</link>
+        <description>Recent content in CTF on skyhaibara</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>skyhaibara</copyright>
-        <lastBuildDate>Sun, 23 Mar 2025 13:55:00 +0800</lastBuildDate><atom:link href="https://skyhaibara.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Haibara</title>
-        <link>https://skyhaibara.github.io/p/haibara/</link>
-        <pubDate>Fri, 14 Mar 2025 23:02:28 +0800</pubDate>
-        
-        <guid>https://skyhaibara.github.io/p/haibara/</guid>
-        <description>&lt;img src="https://skyhaibara.github.io/ai.png" alt="Featured image of post Haibara" /&gt;</description>
-        </item>
-        <item>
+        <copyright>skyhaibara</copyright><atom:link href="https://skyhaibara.github.io/categories/ctf/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CTF Crypto</title>
         <link>https://skyhaibara.github.io/p/ctf-crypto/</link>
         <pubDate>Thu, 13 Mar 2025 18:00:00 +0800</pubDate>

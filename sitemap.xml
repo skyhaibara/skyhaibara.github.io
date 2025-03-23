@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://skyhaibara.github.io/categories/</loc>
+    <lastmod>2025-03-23T13:55:00+08:00</lastmod>
+  </url><url>
     <loc>https://skyhaibara.github.io/p/haibara/</loc>
-    <lastmod>2025-03-15T10:37:44+08:00</lastmod>
+    <lastmod>2025-03-23T13:55:00+08:00</lastmod>
   </url><url>
     <loc>https://skyhaibara.github.io/post/</loc>
-    <lastmod>2025-03-20T20:12:52+08:00</lastmod>
+    <lastmod>2025-03-23T13:55:00+08:00</lastmod>
   </url><url>
     <loc>https://skyhaibara.github.io/p/ctf-crypto/</loc>
-    <lastmod>2025-03-20T20:12:52+08:00</lastmod>
+    <lastmod>2025-03-23T13:55:00+08:00</lastmod>
   </url><url>
     <loc>https://skyhaibara.github.io/p/ctf-misc/</loc>
-    <lastmod>2025-03-13T22:24:23+08:00</lastmod>
+    <lastmod>2025-03-23T13:55:00+08:00</lastmod>
   </url><url>
     <loc>https://skyhaibara.github.io/page/</loc>
     <lastmod>2025-03-20T20:12:52+08:00</lastmod>
@@ -23,15 +26,12 @@
     <loc>https://skyhaibara.github.io/</loc>
     <lastmod>2025-02-27T16:48:59+08:00</lastmod>
   </url><url>
-    <loc>https://skyhaibara.github.io/categories/</loc>
-    <lastmod>2025-03-20T20:12:52+08:00</lastmod>
+    <loc>https://skyhaibara.github.io/categories/ctf/</loc>
+    <lastmod>2025-03-23T13:55:00+08:00</lastmod>
   </url><url>
     <loc>https://skyhaibara.github.io/tags/</loc>
   </url><url>
     <loc>https://skyhaibara.github.io/%E5%85%B3%E4%BA%8E/</loc>
-    <lastmod>2025-03-20T20:12:52+08:00</lastmod>
-  </url><url>
-    <loc>https://skyhaibara.github.io/categories/test/</loc>
     <lastmod>2025-03-20T20:12:52+08:00</lastmod>
   </url><url>
     <loc>https://skyhaibara.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</loc>
@@ -39,5 +39,8 @@
   </url><url>
     <loc>https://skyhaibara.github.io/search/</loc>
     <lastmod>2025-03-12T22:40:40+08:00</lastmod>
+  </url><url>
+    <loc>https://skyhaibara.github.io/categories/%E5%B0%8F%E5%93%80/</loc>
+    <lastmod>2025-03-23T13:55:00+08:00</lastmod>
   </url>
 </urlset>
