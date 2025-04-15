@@ -7,29 +7,29 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>skyhaibara</copyright>
-        <lastBuildDate>Mon, 14 Apr 2025 11:52:47 +0800</lastBuildDate><atom:link href="https://skyhaibara.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>PLAY</title>
-        <link>https://skyhaibara.github.io/categories/play/</link>
-        <pubDate>Wed, 09 Apr 2025 22:39:16 +0800</pubDate>
-        
-        <guid>https://skyhaibara.github.io/categories/play/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>考公</title>
-        <link>https://skyhaibara.github.io/categories/%E8%80%83%E5%85%AC/</link>
-        <pubDate>Mon, 24 Mar 2025 16:32:36 +0800</pubDate>
-        
-        <guid>https://skyhaibara.github.io/categories/%E8%80%83%E5%85%AC/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 15 Apr 2025 21:59:32 +0800</lastBuildDate><atom:link href="https://skyhaibara.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CTF</title>
         <link>https://skyhaibara.github.io/categories/ctf/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://skyhaibara.github.io/categories/ctf/</guid>
-        <description>&lt;img src="https://skyhaibara.github.io/categories/ctf/%E6%A4%BF.png" alt="Featured image of post CTF" /&gt;</description>
+        <description>&lt;img src="https://skyhaibara.github.io/categories/ctf/%E6%A4%BF.webp" alt="Featured image of post CTF" /&gt;</description>
+        </item>
+        <item>
+        <title>PLAY</title>
+        <link>https://skyhaibara.github.io/categories/play/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://skyhaibara.github.io/categories/play/</guid>
+        <description>&lt;img src="https://skyhaibara.github.io/categories/play/ai1.webp" alt="Featured image of post PLAY" /&gt;</description>
+        </item>
+        <item>
+        <title>考公</title>
+        <link>https://skyhaibara.github.io/categories/%E8%80%83%E5%85%AC/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://skyhaibara.github.io/categories/%E8%80%83%E5%85%AC/</guid>
+        <description>&lt;img src="https://skyhaibara.github.io/categories/%E8%80%83%E5%85%AC/ai2.webp" alt="Featured image of post 考公" /&gt;</description>
         </item>
         <item>
         <title>小哀</title>
@@ -37,7 +37,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://skyhaibara.github.io/categories/%E5%B0%8F%E5%93%80/</guid>
-        <description>&lt;img src="https://skyhaibara.github.io/categories/%E5%B0%8F%E5%93%80/ai.JPG" alt="Featured image of post 小哀" /&gt;</description>
+        <description>&lt;img src="https://skyhaibara.github.io/categories/%E5%B0%8F%E5%93%80/ai.webp" alt="Featured image of post 小哀" /&gt;</description>
         </item>
         
     </channel>
