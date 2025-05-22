@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://skyhaibara.github.io/p/haibara/'>
 
-<link rel="stylesheet" href="/scss/style.min.4267ff4dfe3fceb83df9b7cd34cb3591879cc46a72592aa5142b4d5c96fca559.css"><meta property='og:title' content="Haibara">
+<link rel="stylesheet" href="/scss/style.min.4d05b799aa39ed5404eaf79a821b024d96555681d3785b1876e596dd2f4489e2.css"><meta property='og:title' content="Haibara">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://skyhaibara.github.io/p/haibara/'>
 <meta property='og:site_name' content='skyhaibara'>
@@ -699,7 +699,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.3aaf22d6e55e5672cc0bdfb5656a8a8872fba07eee39285f7fbe0ad5f6cf72ea.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.db5ebe3e8b0e9ccee7eb84a2a544484f1ef6b41b5454da0799488aa6a5ae3298.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -711,42 +711,42 @@
         document.head.appendChild(customFont);
     }());
 </script>
-<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
 <script>
     var pjax = new Pjax({
         selectors: [
-            ".main-container",
-            ".js-Pjax"
+            ".main-container"
         ]
     })
 </script>
 
 <script>
-  pjax._handleResponse = pjax.handleResponse;
-  pjax.handleResponse = function(responseText, request, href, options) {
-      if (request.responseText.match("<html")) {
-          if (responseText) {
-              
-              let newDom = new DOMParser().parseFromString(responseText, 'text/html');
-              
-              let bodyClass = newDom.body.className;
-              document.body.setAttribute("class", bodyClass)
-          }
-          
-          pjax._handleResponse(responseText, request, href, options);
-      } else {
-          
-      }
-  }
+    pjax._handleResponse = pjax.handleResponse;
+    pjax.handleResponse = function(responseText, request, href, options) {
+        if (request.responseText.match("<html")) {
+            if (responseText) {
+                
+                let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+                
+                let bodyClass = newDom.body.className;
+                document.body.setAttribute("class", bodyClass)
+            }
+            
+            pjax._handleResponse(responseText, request, href, options);
+        } else {
+            
+        }
+    }
 </script>
 
 <script>
-  document.addEventListener('pjax:complete', () => {
-      
-      window.Stack.init();
-  })
+    document.addEventListener('pjax:complete', () => {
+        
+        window.Stack.init();
+    })
 </script>
+
 
 <script>
   const cdnPath = "https://cdn.jsdelivr.net/gh/skyhaibara/hugo-live2d@master";
@@ -865,6 +865,9 @@
     --base-font-family: '⚪';
     --code-font-family: '⚪';
   }
+</style>
+
+<style>
   #TableOfContents > ul, ol {
       ul, ol {
           display: none;
@@ -968,7 +971,7 @@
 
     .code-more-box {
         width: 100%;
-        padding-top: 78px;
+        padding-top: 12px;
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
         position: absolute;
         left: 0;
